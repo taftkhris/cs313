@@ -5,14 +5,10 @@
 }
 
 #gtx {
-    /*max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;*/
     width: 600px;
     height: 400px;
 }
+
 #gtxParagraph {
     text-align: justify;
     display: block;
@@ -21,6 +17,9 @@
     width: 600px;
 }
 
+#assignemtList {
+    text-align: center;
+}
 ul {
     list-style-type: none;
     margin: 0;
