@@ -13,6 +13,10 @@
     width: 600px;
     height: 400px;
 }
+#gtxParagraph {
+    text-align: justify;
+    width: 600px;
+}
 
 ul {
     list-style-type: none;
