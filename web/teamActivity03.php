@@ -20,8 +20,8 @@ Continents Visited:<br>
 <option value="Asia">Asia</option>
 <option value="Australia">Australia</option>
 <option value="Africa">Africa</option>
-<option value="Antarctica">Antarctica</option><br>
-
+<option value="Antarctica">Antarctica</option>
+<br>
 
 <input type="submit">
 </form>
