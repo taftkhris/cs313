@@ -6,12 +6,12 @@ Name: <input type="text" name="name"><br>
 E-mail: <input type="text" name="email"><br>
 
 Major: <br>
-<input type="radio" name="Computer Science" value="ComputerScience">Computer Science <br>
-<input type="radio" name="Web D and D" value="webDesign">Web Design and Development <br>
-<input type="radio" name="CIT" value="CIT">CIT <br>
-<input type="radio" name="Comp E" value="compE">Computer Engineering<br>
+<input type="radio" name="major" value="ComputerScience">Computer Science <br>
+<input type="radio" name="major" value="webDesign">Web Design and Development <br>
+<input type="radio" name="major" value="CIT">CIT <br>
+<input type="radio" name="major" value="compE">Computer Engineering<br>
 Comments <br>
-<textarea name="commets" rows="5" columns="40"></textarea>
+<textarea name="comments" rows="5" columns="40"></textarea> <br>
 <input type="submit">
 </form>
 
