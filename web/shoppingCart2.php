@@ -23,7 +23,7 @@ echo
     <button type='button' class='submitButton'>Add to Cart</button>
   </div>
   <div>
-    <a href='cartPage.php'>
+    <a href='cartPage.php'>View Cart</a>
   </div>
 </div>";
 ?>
