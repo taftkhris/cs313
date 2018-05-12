@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,6 +9,8 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <p>This is the cart paig</p>
+    
+    <?php echo $_POST["gtx"]; ?><br> 
+    
 </body>
 </html>
