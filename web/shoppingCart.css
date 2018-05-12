@@ -28,10 +28,12 @@
 
 .carType {
     text-align: justify;
+    display: block;
     width: 400px;
 }
 
 .price {
     text-align: justify;
+    display: block;
     width: 400px;
 }
