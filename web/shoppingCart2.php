@@ -5,20 +5,21 @@ echo " <head>
 echo "<div class='row'> 
     <div class='column' style='background-color:#aaa;'>
     <img class='pictures' src='gtx.jpg' alt='redGtx'>
-    <h2>67' GTX</h2>
-    <h3>Price: $300</h3>
+    <h2 class='carType'>67' GTX</h2>
+    <h3 class'price'>Price: $300</h3>
     <p></p>
   </div>
   <div class='column' style='background-color:#bbb;'>
   <img class='pictures' src='nova.jpg' alt='redNova'>
-    <h2>67' Nova</h2>
-    <h3>Price: $500</h3>
-    <p>Some text..</p>
+    <h2 class='carType'>67' Nova</h2>
+    <h3 class'price'>Price: $500</h3>
+    <p></p>
   </div>
   <div class='column' style='background-color:#ccc;'>
-    <h2>56' Chevy</h2>
-    <h3>Price: $400</h3>
-    <p>Some text..</p>
+  <img class='pictures' src='nomad.jpg' alt='chevyNomad'>
+    <h2 class='carType'>56' Chevy</h2>
+    <h3 class'price'>Price: $400</h3>
+    <p></p>
   </div>
 </div>";
 ?>

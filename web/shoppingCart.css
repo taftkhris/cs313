@@ -25,3 +25,13 @@
     width: 400px;
     height: 250px;
 }
+
+.carType {
+    text-align: justify;
+    width: 400px;
+}
+
+.price {
+    text-align: justify;
+    width: 400px;
+}
