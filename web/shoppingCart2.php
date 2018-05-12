@@ -22,5 +22,8 @@ echo
     <h3 class='price'>Price: $400</h3>
     <button type='button' class='submitButton'>Add to Cart</button>
   </div>
+  <div>
+    <a href='cartPage.php'>
+  </div>
 </div>";
 ?>
