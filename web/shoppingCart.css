@@ -18,9 +18,10 @@
 }
 
 .pictures {
+    text-align: justify;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 400px;
     height: 250px;
-    width: 33.33%;
 }
