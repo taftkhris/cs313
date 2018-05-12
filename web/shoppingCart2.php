@@ -4,15 +4,19 @@ echo " <head>
 </head>"; 
 echo "<div class='row'> 
     <div class='column' style='background-color:#aaa;'>
-    <h2>Column 1</h2>
-    <p>Some text..</p>
+    <img id='gtx' src='gtx.jpg' alt='redGtx'>
+    <h2>67' GTX</h2>
+    <h3>Price: $300</h3>
+    <p></p>
   </div>
   <div class='column' style='background-color:#bbb;'>
-    <h2>Column 2</h2>
+    <h2>67' Nova</h2>
+    <h3>Price: $500</h3>
     <p>Some text..</p>
   </div>
   <div class='column' style='background-color:#ccc;'>
-    <h2>Column 3</h2>
+    <h2>56' Chevy</h2>
+    <h3>Price: $400</h3>
     <p>Some text..</p>
   </div>
 </div>";
