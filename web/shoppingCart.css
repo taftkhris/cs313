@@ -16,3 +16,8 @@
     display: table;
     clear: both;
 }
+
+.pictures {
+    width: 400px;
+    height: 250px;
+}
