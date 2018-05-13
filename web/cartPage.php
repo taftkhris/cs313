@@ -11,8 +11,8 @@
 <body>
     
     <?php 
-    foreach ($_POST["value"] as $values)
-        echo("    $values<br>");
+    foreach ($_POST["name"] as $values)
+        echo("$values<br>");
     ?>
     
 </body>
