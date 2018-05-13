@@ -18,7 +18,7 @@
     <?php 
         function setVariableGtx(){
         $_SESSION["carGtx"] = $_POST["gtx"];
-        echo($_SESSION);
+        echo($_SESSION["carGtx"]);
     }
         function setVariableNova(){
         $_SESSION["carNova"]= $_POST["nova"];
