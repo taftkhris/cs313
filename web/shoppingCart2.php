@@ -1,16 +1,5 @@
 <?php 
 session_start();
-?>
-
-<?php 
-function setVariables(){
-  echo("Your function is working");
-}
-if(array_key_exists('gtx', $_POST)) {
-  setVariables();
-}
-?>
-<?php
 echo "<head> 
 <link rel='stylesheet' href='shoppingCart.css'>
 </head>"; 

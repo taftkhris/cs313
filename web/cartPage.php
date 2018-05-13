@@ -10,17 +10,20 @@
 </head>
 <body>
     
-    <?php echo $_POST["gtx"]; ?><br>
+    
     <?php echo $_POST["nova"]; ?><br>
     <?php echo $_POST["chevy"]; ?><br>
 
+    
     <?php 
-function setVariables(){
-  echo("Your function is working");
-}
-if(array_key_exists('gtx', $_POST)) {
-  setVariables();
-}
+        function setVariables(){
+        echo("Your function is working");
+        $values = $_POST["gtx"];
+        echo($values);
+    }
+    if(array_key_exists('gtx', $_POST)) {
+    setVariables();
+    }
 ?>
     
 </body>
