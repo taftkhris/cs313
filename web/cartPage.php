@@ -11,9 +11,12 @@
 <body>
     
     <?php 
-    foreach ($_POST["name"] as $values)
+    foreach ($_POST[""] as $values)
         echo("$values<br>");
     ?>
+    <?php echo $_POST["gtx"]; ?><br>
+    <?php echo $_POST["nova"]; ?><br>
+    <?php echo $_POST["chevy"]; ?><br>
     
 </body>
 </html>
