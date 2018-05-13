@@ -18,15 +18,12 @@
     <?php 
         function setVariableGtx(){
         $_SESSION["carGtx"] = $_POST["gtx"];
-        print_r($_SESSION);
-    }
+        }
         function setVariableNova(){
         $_SESSION["carNova"]= $_POST["nova"];
-        print_r($_SESSION);
-    }
+        }
         function setVariableChevy() {
             $_SESSION["carChevy"]= $_POST["chevy"];
-            print_r($_SESSION);
         }
     if(array_key_exists('gtx', $_POST)) {
     setVariableGtx();
@@ -37,6 +34,7 @@
     elseif(array_key_exists('chevy', $_POST)) {
         setVariableChevy();
     }
+    print_r($_SESSION);
 ?>
     
 </body>
