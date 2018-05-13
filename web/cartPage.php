@@ -22,11 +22,11 @@
     }
         function setVariableNova(){
         $_SESSION["carNova"]= $_POST["nova"];
-        echo($_SESSION);
+        print_r($_SESSION);
     }
         function setVariableChevy() {
             $_SESSION["carChevy"]= $_POST["chevy"];
-            echo($_SESSION);
+            print_r($_SESSION);
         }
     if(array_key_exists('gtx', $_POST)) {
     setVariableGtx();
