@@ -16,13 +16,26 @@
 
     
     <?php 
-        function setVariables(){
-        echo("Your function is working");
-        $values = $_POST["gtx"];
-        echo($values);
+        function setVariableGtx(){
+        $_SESSION["carGtx"] = $_POST["gtx"];
+        echo($_SESSION);
     }
+        function setVariableNova(){
+        $_SESSION["carNova"]= $_POST["nova"];
+        echo($_SESSION);
+    }
+        function setVariableChevy() {
+            $_SESSION["carChevy"]= $_POST["chevy"];
+            echo($_SESSION);
+        }
     if(array_key_exists('gtx', $_POST)) {
-    setVariables();
+    setVariableGtx();
+    }
+    elseif(array_key_exists('nova', $_POST)) {
+        setVariableNova();
+    }
+    elseif(array_key_exists('chevy', $_POST)) {
+        setVariableChevy();
     }
 ?>
     
