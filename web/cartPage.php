@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,13 +28,13 @@ session_start();
     
     <?php 
         function setVariableGtx(){
-            $_COOKIE["carGtx"] = $_POST["gtx"];
+            $_SESSION["carGtx"] = $_POST["gtx"];
         }
         function setVariableNova(){
-            $_COOKIE["carNova"] = $_POST["nova"];
+            $_SESSION["carNova"] = $_POST["nova"];
         }
         function setVariableChevy() {
-            $_COOKIE["carChevy"]= $_POST["chevy"];
+            $_SESSION["carChevy"]= $_POST["chevy"];
         }
     if(array_key_exists('gtx', $_POST)) {
     setVariableGtx();
@@ -45,7 +45,7 @@ session_start();
     elseif(array_key_exists('chevy', $_POST)) {
         setVariableChevy();
     }
-    print_r($_COOKIE);
+    print_r($_SESSION);
 ?>
     
 </body>
