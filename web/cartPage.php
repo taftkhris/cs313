@@ -15,23 +15,23 @@
     <?php echo $_POST["chevy"]; ?><br>
 
 <?php
-    if(array_key_exists('gtx', $_POST)) 
+    /*if(array_key_exists('gtx', $_POST)) 
         echo "found gtx key";
     if(array_key_exists('nova', $_POST)) 
         echo "found nova key";
     if(array_key_exists('chevy', $_POST)) 
-        echo "found chevy key";
+        echo "found chevy key";*/
 ?>
     
     <?php 
         function setVariableGtx(){
-            $_SESSION["carGtx"] = $_POST["gtx"];
+            $_COOKIE["carGtx"] = $_POST["gtx"];
         }
         function setVariableNova(){
-            $_SESSION["carNova"] = $_POST["nova"];
+            $_COOKIE["carNova"] = $_POST["nova"];
         }
         function setVariableChevy() {
-            $_SESSION["carChevy"]= $_POST["chevy"];
+            $_COOKIE["carChevy"]= $_POST["chevy"];
         }
     if(array_key_exists('gtx', $_POST)) {
     setVariableGtx();
@@ -42,7 +42,7 @@
     elseif(array_key_exists('chevy', $_POST)) {
         setVariableChevy();
     }
-    print_r($_SESSION);
+    print_r($_COOKIE);
 ?>
     
 </body>
