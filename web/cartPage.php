@@ -49,6 +49,15 @@ session_start();
         $gtx_json = json_decode($_SESSION['carGtx'], true);
         echo $gtx_json['type'];
     }
+    if(array_key_exists('carNova', $_SESSION)) {
+        $nova_json = json_decode($_SESSION['carNova'], true);
+        echo $nova_json['type'];
+    }
+    if(array_key_exists('carChevy', $_SESSION)) {
+        $chevy_json = json_decode($_SESSION['carChevy'], true);
+        echo $chevy_json['type'];
+    }
+    
 
     //    print_r($_SESSION);
 ?>
