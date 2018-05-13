@@ -45,9 +45,8 @@ session_start();
     elseif(array_key_exists('chevy', $_POST)) {
         setVariableChevy();
     }
-
-    if(array_key_exists('gtx', $_SESSION)) {
-        $gtx_json = json_decode($_SESSION['gtx'], true);
+    if(array_key_exists('carGtx', $_SESSION)) {
+        $gtx_json = json_decode($_SESSION['carGtx'], true);
         echo $gtx_json['type'];
     }
 
