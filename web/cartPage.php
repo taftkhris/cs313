@@ -14,13 +14,21 @@
     <?php echo $_POST["nova"]; ?><br>
     <?php echo $_POST["chevy"]; ?><br>
 
+<?php
+    if(array_key_exists('gtx', $_POST)) 
+        echo "found gtx key";
+    if(array_key_exists('nova', $_POST)) 
+        echo "found nova key";
+    if(array_key_exists('chevy', $_POST)) 
+        echo "found chevy key";
+?>
     
     <?php 
         function setVariableGtx(){
-        $_SESSION["carGtx"] = $_POST["gtx"];
+            $_SESSION["carGtx"] = $_POST["gtx"];
         }
         function setVariableNova(){
-        $_SESSION["carNova"]= $_POST["nova"];
+            $_SESSION["carNova"] = $_POST["nova"];
         }
         function setVariableChevy() {
             $_SESSION["carChevy"]= $_POST["chevy"];
