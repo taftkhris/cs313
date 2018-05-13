@@ -21,7 +21,7 @@ echo
   <img class='pictures' src='nomad.jpg' alt='chevyNomad'>
     <h2 class='carType'>56' Chevy</h2>
     <h3 class='price'>Price: $400</h3>
-    <button type='submit' class='submitButton' name='chevy' value='{\"type\":\"Chevy\",\"price\":\"400\"}>Add to Cart</button>
+    <button type='submit' class='submitButton' name='chevy' value='{\"type\":\"Chevy\",\"price\":\"400\"}'>Add to Cart</button>
   </div>
   <div>
     <a href='cartPage.php'>View Cart</a>
