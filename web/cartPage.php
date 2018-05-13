@@ -10,7 +10,10 @@
 </head>
 <body>
     
-    <?php echo $_POST["gtx"]; ?><br> 
+    <?php 
+    foreach ($_POST["value"] as $values)
+        echo("    $values<br>");
+    ?>
     
 </body>
 </html>
