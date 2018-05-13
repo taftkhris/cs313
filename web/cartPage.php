@@ -10,13 +10,18 @@
 </head>
 <body>
     
-    <?php 
-    foreach ($_POST[""] as $values)
-        echo("$values<br>");
-    ?>
     <?php echo $_POST["gtx"]; ?><br>
     <?php echo $_POST["nova"]; ?><br>
     <?php echo $_POST["chevy"]; ?><br>
+
+    <?php 
+function setVariables(){
+  echo("Your function is working");
+}
+if(array_key_exists('gtx', $_POST)) {
+  setVariables();
+}
+?>
     
 </body>
 </html>
