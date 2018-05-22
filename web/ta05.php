@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <style>         
+    </style>
 </head>
 <body>
     <h1>Scripture Resources</h1>
@@ -27,10 +29,10 @@
     
     foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
     {
-    echo 'Book: ' . $row['book'];
-    echo ' Chapter: ' . $row['chapter'];
-    echo ' Verse: ' . $row['verse'];
-    echo ' Content: ' . $row['content'];
+    echo '<h3><strong>' . $row['book'] . '</strong></h3>';
+    echo $row['chapter'];
+    echo $row['verse'];
+    echo $row['content'];
     echo '<br/>';
     }
     ?>    
