@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <style>         
-    </style>
 </head>
 <body>
     <h1>Scripture Resources</h1>
@@ -27,10 +25,21 @@
     
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+    // foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+    // {
+    // echo '<p><strong>' . $row['book'] . $row['chapter'] . ':' . $row['verse'] . ' - ' .  '</strong>' . '"' . $row['content'] . '"' . '</p>' ;
+    // echo '<br/>';
+    // }
+    ?>
+    <?php 
+    echo 'Book: <input type="text" name="Book"><br>';
+    echo 'Chapter: <input type="text" name="Chapter"><br>';
+    echo 'Verse: <input type="text" name="Verse"><br>';
+    echo '<textarea rows="4" cols="50"/>';
+
+    foreach ($db->query('SELECT "name" FROM topic') as $topic_row )
     {
-    echo '<p><strong>' . $row['book'] . $row['chapter'] . ':' . $row['verse'] . ' - ' .  '</strong>' . '"' . $row['content'] . '"' . '</p>' ;
-    echo '<br/>';
+    echo '<input type="checkbox" name="topic"';
     }
     ?>    
 </body>
