@@ -37,9 +37,12 @@
     echo 'Verse: <input type="text" name="Verse"><br>';
     echo '<textarea rows="4" cols="50"></textarea><br>';
 
-    foreach ($db->query('SELECT name FROM topic') as $topic_row )
+    foreach ($db->query('SELECT id, name FROM topic') as $topic_row )
     {
-    echo '<input type="checkbox" name="topic"' . $topic_row['name'] . '</br>';
+
+        $id = $topic_row['id'];
+        echo "<input type='checkbox' name='topics[]' value='$id'>" . $topic_row['name'] . "</br>";
+    // echo '<input type="checkbox" name="topics[]" value="' . $topic_row['id'] . '">' . $topic_row['name'] . '</br>';
     }
     ?>    
 </body>
