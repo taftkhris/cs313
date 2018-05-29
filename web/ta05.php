@@ -35,7 +35,7 @@
     echo 'Book: <input type="text" name="Book"><br>';
     echo 'Chapter: <input type="text" name="Chapter"><br>';
     echo 'Verse: <input type="text" name="Verse"><br>';
-    echo '<textarea rows="4" cols="50"/>';
+    echo '<textarea rows="4" cols="50"></textarea>';
 
     foreach ($db->query('SELECT "name" FROM topic') as $topic_row )
     {
