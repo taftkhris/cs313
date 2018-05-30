@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>3 Col Portfolio - Start Bootstrap Template</title>
+    <title>Tim's Art Gallery</title>
 
     <!-- Bootstrap core CSS -->
     <link href="mainCss.css" rel="stylesheet">
@@ -22,10 +22,43 @@
 
   <body>
 
+  <?php
+    $dbUrl = getenv('DATABASE_URL');
+
+    $dbopts = parse_url($dbUrl);
+    
+    $dbHost = $dbopts["host"];
+    $dbPort = $dbopts["port"];
+    $dbUser = $dbopts["user"];
+    $dbPassword = $dbopts["pass"];
+    $dbName = ltrim($dbopts["path"],'/');
+    
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $imageLocation = NULL;
+    $imageTitle = NULL;
+    $imageDescription = NULL;
+    $imageDimensions = NULL;
+    $imagePrice = 0;
+    $product_row = $db->query('SELECT title, description, dimentions, price, image FROM product');
+    
+    if ($product_row != NULL)
+    {
+      $imageLocation = $product_row["image"];
+      $imageTitle = $product_row["title"];
+      $imageDescription = $product_row["description"];
+      $imageDimensions = $product_row["dimentions"];
+      $imagePrice = $product_row["price"];
+    }
+
+    ?>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Tim's Art</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,19 +87,19 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
+      <h1 class="my-4">Tim's Art
+        <!-- <small>Secondary Text</small> -->
       </h1>
 
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<?php echo "artWork/" . $imageLocation;?>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project One</a>
+                <a href="#"><?php echo $imageTitle; ?></a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+              <p class="card-text"><?php echo $imageDescription . "\n" . $imageDimensions;?></p>
             </div>
           </div>
         </div>
