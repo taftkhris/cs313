@@ -48,12 +48,12 @@
     
     if ($product_row != NULL)
     {
-//      $imageLocation = $product_row['image'];
+      $imageLocation = $product_row['image'];
 //       $imageTitle = "this is a test image title.  did it work?"; //$product_row["title"];
-       $imageTitle = $product_row['title'];
-//      $imageDescription = $product_row["description"];
-//      $imageDimensions = $product_row["dimensions"];
-//      $imagePrice = $product_row["price"];
+      $imageTitle = $product_row['title'];
+      $imageDescription = $product_row["description"];
+      $imageDimensions = $product_row["dimensions"];
+      $imagePrice = $product_row["price"];
     }
 
     ?>
@@ -97,12 +97,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php //echo "artWork/" . $imageLocation;?>" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<?php echo "artWork/" . $imageLocation;?>" alt=""></a>
             <div class="card-body"> 
               <h4 class="card-title">
                 <a href="#"><?php echo $imageTitle; ?></a>
               </h4>
-              <p class="card-text"><?php //echo $imageDescription . "\n" . $imageDimensions;?></p>
+              <p class="card-text"><?php echo $imageDescription . "\n" . $imageDimensions;?></p>
             </div>
           </div>
         </div>
