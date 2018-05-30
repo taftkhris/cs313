@@ -43,13 +43,14 @@
     $imageDimensions = NULL;
     $imagePrice = 0;
 //    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
-    $product_row = $db->query('SELECT title FROM product');
+    $stmt = $db->query('SELECT title FROM product');
+    $product_row = $stmt->fetch(PDO::FETCH_BOTH);
     
     if ($product_row != NULL)
     {
 //      $imageLocation = $product_row['image'];
 //       $imageTitle = "this is a test image title.  did it work?"; //$product_row["title"];
-       $imageTitle = $product_row[1]['title'];
+       $imageTitle = $product_row['title'];
 //      $imageDescription = $product_row["description"];
 //      $imageDimensions = $product_row["dimensions"];
 //      $imagePrice = $product_row["price"];
