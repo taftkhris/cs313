@@ -32,6 +32,7 @@
     // }
     ?>
     <?php 
+    echo "<form action='submitScripture.php' method ='post'>";
     echo 'Book: <input type="text" name="Book"><br>';
     echo 'Chapter: <input type="text" name="Chapter"><br>';
     echo 'Verse: <input type="text" name="Verse"><br>';
@@ -44,6 +45,8 @@
         echo "<input type='checkbox' name='topics[]' value='$id'>" . $topic_row['name'] . "</br>";
     // echo '<input type="checkbox" name="topics[]" value="' . $topic_row['id'] . '">' . $topic_row['name'] . '</br>';
     }
+    echo "<input type ='submit'>";
+    echo "</form>";
     ?>    
 </body>
 </html>
