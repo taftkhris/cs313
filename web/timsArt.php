@@ -98,7 +98,7 @@
             <a href="#"><img class="card-img-top" src="<?php //echo "artWork/" . $imageLocation;?>" alt=""></a>
             <div class="card-body"> 
               <h4 class="card-title">
-                <a href="#"><?php //echo $imageTitle; ?></a>
+                <a href="#"><?php echo $imageTitle; ?></a>
               </h4>
               <p class="card-text"><?php //echo $imageDescription . "\n" . $imageDimensions;?></p>
             </div>
