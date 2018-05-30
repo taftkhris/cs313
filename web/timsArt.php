@@ -42,15 +42,16 @@
     $imageDescription = NULL;
     $imageDimensions = NULL;
     $imagePrice = 0;
-    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
+//    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
+    $product_row = $db->query('SELECT title FROM product');
     
     if ($product_row != NULL)
     {
-      $imageLocation = $product_row["image"];
+//      $imageLocation = $product_row["image"];
       $imageTitle = $product_row["title"];
-      $imageDescription = $product_row["description"];
-      $imageDimensions = $product_row["dimensions"];
-      $imagePrice = $product_row["price"];
+//      $imageDescription = $product_row["description"];
+//      $imageDimensions = $product_row["dimensions"];
+//      $imagePrice = $product_row["price"];
     }
 
     ?>
