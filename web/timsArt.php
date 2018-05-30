@@ -11,10 +11,12 @@
     <title>3 Col Portfolio - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mainCss.css" rel="stylesheet">
+    <!-- vendor/bootstrap/css/bootstrap.min.css -->
 
     <!-- Custom styles for this template -->
     <link href="artSite.css" rel="stylesheet">
+    <!-- css/3-col-portfolio.css -->
 
   </head>
 
