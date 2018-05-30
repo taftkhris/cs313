@@ -44,14 +44,14 @@
     $imagePrice = 0;
     $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
     
-    // if ($product_row != NULL)
-    // {
-    //   $imageLocation = $product_row["image"];
-    //   $imageTitle = $product_row["title"];
-    //   $imageDescription = $product_row["description"];
-    //   $imageDimensions = $product_row["dimensions"];
-    //   $imagePrice = $product_row["price"];
-    // }
+    if ($product_row != NULL)
+    {
+      $imageLocation = $product_row["image"];
+      $imageTitle = $product_row["title"];
+      $imageDescription = $product_row["description"];
+      $imageDimensions = $product_row["dimensions"];
+      $imagePrice = $product_row["price"];
+    }
 
     ?>
 
