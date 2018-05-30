@@ -47,8 +47,9 @@
     
     if ($product_row != NULL)
     {
-//      $imageLocation = $product_row["image"];
-       $imageTitle = "this is a test image title.  did it work?"; //$product_row["title"];
+//      $imageLocation = $product_row['image'];
+//       $imageTitle = "this is a test image title.  did it work?"; //$product_row["title"];
+       $imageTitle = $product_row['title'];
 //      $imageDescription = $product_row["description"];
 //      $imageDimensions = $product_row["dimensions"];
 //      $imagePrice = $product_row["price"];
