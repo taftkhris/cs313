@@ -49,7 +49,7 @@
     {
 //      $imageLocation = $product_row['image'];
 //       $imageTitle = "this is a test image title.  did it work?"; //$product_row["title"];
-       $imageTitle = $product_row[0]['title'];
+       $imageTitle = $product_row[1]['title'];
 //      $imageDescription = $product_row["description"];
 //      $imageDimensions = $product_row["dimensions"];
 //      $imagePrice = $product_row["price"];
