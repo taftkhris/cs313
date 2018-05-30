@@ -23,35 +23,35 @@
   <body>
 
   <?php
-    // $dbUrl = getenv('DATABASE_URL');
+    $dbUrl = getenv('DATABASE_URL');
 
-    // $dbopts = parse_url($dbUrl);
+    $dbopts = parse_url($dbUrl);
     
-    // $dbHost = $dbopts["host"];
-    // $dbPort = $dbopts["port"];
-    // $dbUser = $dbopts["user"];
-    // $dbPassword = $dbopts["pass"];
-    // $dbName = ltrim($dbopts["path"],'/');
+    $dbHost = $dbopts["host"];
+    $dbPort = $dbopts["port"];
+    $dbUser = $dbopts["user"];
+    $dbPassword = $dbopts["pass"];
+    $dbName = ltrim($dbopts["path"],'/');
     
-    // $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     
-    // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // $imageLocation = NULL;
-    // $imageTitle = NULL;
-    // $imageDescription = NULL;
-    // $imageDimensions = NULL;
-    // $imagePrice = 0;
-    // $product_row = $db->query('SELECT title, description, dimentions, price, image FROM product');
+    $imageLocation = NULL;
+    $imageTitle = NULL;
+    $imageDescription = NULL;
+    $imageDimensions = NULL;
+    $imagePrice = 0;
+    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
     
-    // if ($product_row != NULL)
-    // {
-    //   $imageLocation = $product_row["image"];
-    //   $imageTitle = $product_row["title"];
-    //   $imageDescription = $product_row["description"];
-    //   $imageDimensions = $product_row["dimentions"];
-    //   $imagePrice = $product_row["price"];
-    // }
+    if ($product_row != NULL)
+    {
+      $imageLocation = $product_row["image"];
+      $imageTitle = $product_row["title"];
+      $imageDescription = $product_row["description"];
+      $imageDimensions = $product_row["dimensions"];
+      $imagePrice = $product_row["price"];
+    }
 
     ?>
 
