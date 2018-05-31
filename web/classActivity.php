@@ -41,5 +41,6 @@ $courses = $statement->fetchAll(PDO::FETCH_ASSOC);
         echo "<li><a href='courseDetails.php?course_id=$id'>$number - $name</a></li>";
     }
     ?>
+    </ul>
 </body>
 </html>
