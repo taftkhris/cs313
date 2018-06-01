@@ -27,8 +27,8 @@ if (!isset($productList)) {
 $found = false;
 for($k = 0; $k < count($productList); $k++) {
     $item = $productList[$k];
-    if($item->$productId == $productId) {
-        $item->$quantity++;
+    if($item->productId == $productId) {
+        $item->quantity++;
         $found = true;
         break;
     }
@@ -36,7 +36,7 @@ for($k = 0; $k < count($productList); $k++) {
 if ($found == false) {
     $item = new myProductDetail();
     $item->productId = $productId;
-    $item->$quantity = 1;
+    $item->quantity = 1;
     $productList[] = $item;
 }
 $_SESSION["productList"] = $productList;
