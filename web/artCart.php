@@ -1,5 +1,8 @@
 <?php  
+session_start();
 require("dbConnect.php");
+require("productDef.php");
+
 $productId = htmlspecialchars($_GET["productId"]);
 
 $db = get_db();
@@ -11,6 +14,32 @@ $statement->bindValue(":taft", $productId, PDO::PARAM_INT);
 
 $statement->execute();
 $product = $statement->fetch();
+
+// $detail = new myProductDetail();
+// $detail->productId = $productId;
+$item = new myProductDetail();
+$item->productId = $productId;
+
+$productList = $_SESSION["productList"];
+if (!isset($productList)) {
+    $productList = array();
+}
+$found = false;
+for($k = 0; $k < count($productList); $k++) {
+    $item = $productList[$k];
+    if($item->$productId == $productId) {
+        $item->$quantity++;
+        $found = true;
+        break;
+    }
+}
+if ($found == false) {
+    $item = new myProductDetail();
+    $item->productId = $productId;
+    $item->$quantity = 1;
+    $productList[] = $item;
+}
+$_SESSION["productList"] = $productList;
 
 
 ?>
@@ -26,6 +55,6 @@ $product = $statement->fetch();
     <script src="main.js"></script>
 </head>
 <body>
-    <h1><?php var_dump($product)?> </h1>
+    <h1> <?php var_dump($productList); ?> </h1>
 </body>
 </html>
