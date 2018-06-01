@@ -48,7 +48,7 @@
     
     if ($product_row != NULL)
     {
-      $productId= $product['product_id'];
+      $productId= $product_row['product_id'];
       $imageLocation = $product_row['image'];
       $imageTitle = $product_row['title'];
       $imageDescription = $product_row["descr"];
