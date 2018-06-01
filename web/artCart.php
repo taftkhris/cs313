@@ -1,5 +1,4 @@
-<?php 
-session_start();
+<?php  
 require("dbConnect.php");
 $productId = htmlspecialchars($_GET["productId"]);
 
@@ -13,7 +12,9 @@ $statement->bindValue(":taft", $productId, PDO::PARAM_INT);
 $statement->execute();
 $product = $statement->fetch();
 
+
 ?>
+
 <!<!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,6 @@ $product = $statement->fetch();
     <script src="main.js"></script>
 </head>
 <body>
-    <h1><?php echo var_dump($product); ?></h1>
-    <a href="artCart.php?productId=<?php echo $productId; ?>">Add to Cart</a>
+    <h1><?php var_dump($product)?> </h1>
 </body>
 </html>
