@@ -4,7 +4,7 @@ $productId = htmlspecialchars($_GET["productId"]);
 
 $db = get_db();
 
-$query = "SELECT product_id, title, description as descr, dimensions, price, image FROM product where id=:taft";
+$query = "SELECT product_id, title, description as descr, dimensions, price, image FROM product where product_id=:taft";
 
 $statement = $db->prepare($query);
 $statement->bindValue(":taft", $productId, PDO::PARAM_INT);
