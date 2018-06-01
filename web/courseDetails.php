@@ -35,6 +35,9 @@ $name = $row['name'];
     <input type="hidden" name="course_id" value="<?php echo $courseId; ?>">
     <input type="date" name="date"><br>
     <textarea name="content" placeholder="content"> </textarea>
+
+    <br><br>
+    <input type ="submit" value="add Note">
     </form>
 </body>
 </html>
