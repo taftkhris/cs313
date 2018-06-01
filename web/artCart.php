@@ -18,7 +18,14 @@ $product = $statement->fetch();
 // $detail = new myProductDetail();
 // $detail->productId = $productId;
 
+
+
+
+
+
+
 $productList = $_SESSION["productList"];
+var_dump($productList); 
 if (!isset($productList)) {
     $productList = array();
 }
