@@ -17,8 +17,6 @@ $product = $statement->fetch();
 
 // $detail = new myProductDetail();
 // $detail->productId = $productId;
-$item = new myProductDetail();
-$item->productId = $productId;
 
 $productList = $_SESSION["productList"];
 if (!isset($productList)) {
@@ -27,7 +25,11 @@ if (!isset($productList)) {
 $found = false;
 for($k = 0; $k < count($productList); $k++) {
     $item = $productList[$k];
+    echo "We're in the loop<br>";
+    echo "The items product id is: $item->productId<br>";
+    echo "The items product id is: $productId<br>";
     if($item->productId == $productId) {
+        echo "found a match";
         $item->quantity++;
         $found = true;
         break;
