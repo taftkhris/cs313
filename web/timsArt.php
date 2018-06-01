@@ -43,11 +43,12 @@
     $imageDimensions = NULL;
     $imagePrice = 0;
 //    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
-    $stmt = $db->query('SELECT title, description as descr, dimensions, price, image FROM product');
+    $stmt = $db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product');
     $product_row = $stmt->fetch(PDO::FETCH_BOTH);
     
     if ($product_row != NULL)
     {
+      $productId= $product['product_id'];
       $imageLocation = $product_row['image'];
       $imageTitle = $product_row['title'];
       $imageDescription = $product_row["descr"];
@@ -99,7 +100,7 @@
             <a href="#"><img class="card-img-top" src="<?php echo "artWork/" . $imageLocation;?>" alt=""></a>
             <div class="card-body"> 
               <h4 class="card-title">
-                <a href="#"><?php echo $imageTitle; ?></a>
+                <a href="details.php?productId=<?php echo $productId; ?>"><?php echo $imageTitle; ?></a>
               </h4>
               <p class="card-text"><?php echo $imageDescription?></p>
             </div>
