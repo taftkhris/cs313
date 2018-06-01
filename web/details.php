@@ -10,7 +10,7 @@ $statement = $db->prepare($query);
 $statement->bindValue(":taft", $productId, PDO::PARAM_INT);
 
 $statement->execute();
-$product = $statement->fetch(PDO::FETCH_CLASS);
+$product = $statement->fetch();
 
 
 ?>
