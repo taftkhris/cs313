@@ -31,7 +31,7 @@ if (!isset($productList)) {
 }
 $found = false;
 for($k = 0; $k < count($productList); $k++) {
-    $item = $productList[$k];
+    $item = unserialize($productList[$k]);
     echo "We're in the loop<br>";
     echo "The items product id is: $item->productId<br>";
     echo "The items product id is: $productId<br>";
@@ -46,7 +46,7 @@ if ($found == false) {
     $item = new myProductDetail();
     $item->productId = $productId;
     $item->quantity = 1;
-    $productList[] = $item;
+    $productList[] = serialize($item);
 }
 $_SESSION["productList"] = $productList;
 
