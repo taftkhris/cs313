@@ -26,6 +26,6 @@ $product = $statement->fetch();
 </head>
 <body>
     <h1><?php echo var_dump($product); ?></h1>
-    <a href="artCart.php?productId=<?php echo $productId; ?>">Add to Cart</a>
+    <a href="artCart.php?productId=<?php echo $productId; ?>&mode=add">Add to Cart</a>
 </body>
 </html>

@@ -21,7 +21,8 @@ $product = $statement->fetch();
 
 
 
-
+echo "The items product id is: " . $_SERVER["REQUEST_METHOD"] . "<br>";
+ 
 
 
 $productList = unserialize($_SESSION["productList"]);
