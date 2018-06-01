@@ -101,7 +101,7 @@
               <h4 class="card-title">
                 <a href="#"><?php echo $imageTitle; ?></a>
               </h4>
-              <p class="card-text"><?php echo $imageDescription . "\n" . $imageDimensions;?></p>
+              <p class="card-text"><?php echo $imageDescription?></p>
             </div>
           </div>
         </div>
