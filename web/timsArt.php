@@ -116,13 +116,12 @@
         $imageDimensions = $product_row["dimensions"];
         $imagePrice = $product_row["price"];
 
-          // echo "<div class='row'>";
           echo "<div class='col-lg-4 col-sm-6 portfolio-item'>";
           echo  "<div class='card h-100'>";
           echo     "<a href='#'><img class='card-img-top' src='artWork/$imageLocation' alt=''></a>";
           echo    "<div class='card-body'>"; 
           echo      "<h4 class='card-title'>";
-          echo        "<a href='details.php?productId='$productId'> $imageTitle </a>";
+          echo        "<a href='details.php?productId=$productId'> $imageTitle </a>";
           echo      "</h4>";
           echo      "<p class='card-text'>$imageDescription</p>";
           echo    "</div>";
