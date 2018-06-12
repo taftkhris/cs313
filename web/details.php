@@ -48,15 +48,14 @@ $product = $statement->fetch();
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
-                    <h3>Samsung Galaxy S4 I337 16GB 4G LTE Unlocked GSM Android Cell Phone</h3>    
-                    <h5 style="color:#337ab7">vendido por <a href="#">Samsung</a> · <small style="color:#337ab7">(5054 ventas)</small></h5>
-        
+                    <h3><?php echo $product["title"]; ?></h3>            
+                    
                     <!-- Precios -->
-                    <h6 class="title-price"><small>PRECIO OFERTA</small></h6>
-                    <h3 style="margin-top:0px;">U$S 399</h3>
+                    <h6 class="title-price"><small><?php echo $product["title"] . "Art Piece"; ?></small></h6>
+                    <h3 style="margin-top:0px;"><?php echo $product["price"]; ?></h3>
         
                     <!-- Detalles especificos del producto -->
-                    <div class="section">
+                    <!-- <div class="section">
                         <h6 class="title-attr" style="margin-top:15px;" ><small>COLOR</small></h6>                    
                         <div>
                             <div class="attr" style="width:25px;background:#5a5a5a;"></div>
@@ -69,9 +68,9 @@ $product = $statement->fetch();
                             <div class="attr2">16 GB</div>
                             <div class="attr2">32 GB</div>
                         </div>
-                    </div>   
+                    </div>    -->
                     <div class="section" style="padding-bottom:20px;">
-                        <h6 class="title-attr"><small>CANTIDAD</small></h6>                    
+                        <h6 class="title-attr"><small>Quantity</small></h6>                    
                         <div>
                             <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
                             <input value="1" />
@@ -81,17 +80,17 @@ $product = $statement->fetch();
         
                     <!-- Botones de compra -->
                     <div class="section" style="padding-bottom:20px;">
-                        <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Agregar al carro</button>
-                        <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> Agregar a lista de deseos</a></h6>
+                        <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Card</button>
+                        <!-- <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> Agregar a lista de deseos</a></h6> -->
                     </div>                                        
                 </div>                              
         
                 <div class="col-xs-9">
                     <ul class="menu-items">
-                        <li class="active">Detalle del producto</li>
-                        <li>Garantía</li>
-                        <li>Vendedor</li>
-                        <li>Envío</li>
+                        <li class="active">Product Details</li>
+                        <li><?php echo $product["dimensions"]?></li>
+                        <!-- <li>Vendedor</li>
+                        <li>Envío</li> -->
                     </ul>
                     <div style="width:100%;border-top:1px solid silver">
                         <p style="padding:15px;">
@@ -104,7 +103,7 @@ $product = $statement->fetch();
                         <small>
                             <ul>
                                 <li>Super AMOLED capacitive touchscreen display with 16M colors</li>
-                                <li>Available on GSM, AT T, T-Mobile and other carriers</li>
+                                <!-- <li>Available on GSM, AT T, T-Mobile and other carriers</li>
                                 <li>Compatible with GSM 850 / 900 / 1800; HSDPA 850 / 1900 / 2100 LTE; 700 MHz Class 17 / 1700 / 2100 networks</li>
                                 <li>MicroUSB and USB connectivity</li>
                                 <li>Interfaces with Wi-Fi 802.11 a/b/g/n/ac, dual band and Bluetooth</li>
@@ -117,7 +116,7 @@ $product = $statement->fetch();
                                 <li>Available in white or black</li>
                                 <li>Model I337</li>
                                 <li>Package includes phone, charger, battery and user manual</li>
-                                <li>Phone is 5.38 inches high x 2.75 inches wide x 0.13 inches deep and weighs a mere 4.59 oz </li>
+                                <li>Phone is 5.38 inches high x 2.75 inches wide x 0.13 inches deep and weighs a mere 4.59 oz </li> -->
                             </ul>  
                         </small>
                     </div>
