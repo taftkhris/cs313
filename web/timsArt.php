@@ -37,24 +37,35 @@
     
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+
     $imageLocation = NULL;
     $imageTitle = NULL;
     $imageDescription = NULL;
     $imageDimensions = NULL;
     $imagePrice = 0;
 //    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
-    $stmt = $db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product');
-    $product_row = $stmt->fetch(PDO::FETCH_BOTH);
+    // $stmt = $db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product');
+    // $product_row = $stmt->fetch(PDO::FETCH_BOTH);
     
-    if ($product_row != NULL)
-    {
-      $productId= $product_row['product_id'];
-      $imageLocation = $product_row['image'];
-      $imageTitle = $product_row['title'];
-      $imageDescription = $product_row["descr"];
-      $imageDimensions = $product_row["dimensions"];
-      $imagePrice = $product_row["price"];
-    }
+    // if ($product_row != NULL)
+    // {
+    //   $productId= $product_row['product_id'];
+    //   $imageLocation = $product_row['image'];
+    //   $imageTitle = $product_row['title'];
+    //   $imageDescription = $product_row["descr"];
+    //   $imageDimensions = $product_row["dimensions"];
+    //   $imagePrice = $product_row["price"];
+    // }
+
+    $query = "SELECT product_id, title, description as descr, dimensions, price, image FROM product";
+
+    $statement = $db->prepare($query);
+
+    //bind any variables needed here...
+
+    $statement->execute();
+    $product = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     ?>
 
@@ -95,9 +106,9 @@
       </h1>
       
       <?php 
-       foreach ($db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product') as $product_row )
+       foreach ($product as $product_row)
        {
-        $productId= $product_row['product_id'];
+        $productId = $product_row['product_id'];
         $imageLocation = $product_row['image'];
         $imageTitle = $product_row['title'];
         $imageDescription = $product_row["descr"];
