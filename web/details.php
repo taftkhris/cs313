@@ -99,7 +99,7 @@ $product = $statement->fetch();
                         </p>
                         <small>
                             <ul>
-                                <!-- <li>Super AMOLED capacitive touchscreen display with 16M colors</li> -->
+                                <li>Super AMOLED capacitive touchscreen display with 16M colors</li>
                                 <!-- <li>Available on GSM, AT T, T-Mobile and other carriers</li>
                                 <li>Compatible with GSM 850 / 900 / 1800; HSDPA 850 / 1900 / 2100 LTE; 700 MHz Class 17 / 1700 / 2100 networks</li>
                                 <li>MicroUSB and USB connectivity</li>
