@@ -51,8 +51,8 @@ $product = $statement->fetch();
                     <h3><?php echo $product["title"]; ?></h3>            
                     
                     <!-- Precios -->
-                    <h6 class="title-price"><small><?php echo $product["title"] . "Art Piece"; ?></small></h6>
-                    <h3 style="margin-top:0px;"><?php echo $product["price"]; ?></h3>
+                    <h6 class="title-price"><small><?php echo $product["title"] . " Art Piece"; ?></small></h6>
+                    <h3 style="margin-top:0px;"><?php echo "$" . $product["price"]; ?></h3>
         
                     <!-- Detalles especificos del producto -->
                     <!-- <div class="section">
@@ -80,8 +80,7 @@ $product = $statement->fetch();
         
                     <!-- Botones de compra -->
                     <div class="section" style="padding-bottom:20px;">
-                        <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Card</button>
-                        <!-- <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> Agregar a lista de deseos</a></h6> -->
+                        <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</button>
                     </div>                                        
                 </div>                              
         
@@ -95,14 +94,12 @@ $product = $statement->fetch();
                     <div style="width:100%;border-top:1px solid silver">
                         <p style="padding:15px;">
                             <small>
-                            Stay connected either on the phone or the Web with the Galaxy S4 I337 from Samsung. With 16 GB of memory and a 4G connection, this phone stores precious photos and video and lets you upload them to a cloud or social network at blinding-fast speed. With a 17-hour operating life from one charge, this phone allows you keep in touch even on the go. 
-        
-                            With its built-in photo editor, the Galaxy S4 allows you to edit photos with the touch of a finger, eliminating extraneous background items. Usable with most carriers, this smartphone is the perfect companion for work or entertainment.
+                            Description Coming Soon
                             </small>
                         </p>
                         <small>
                             <ul>
-                                <li>Super AMOLED capacitive touchscreen display with 16M colors</li>
+                                <!-- <li>Super AMOLED capacitive touchscreen display with 16M colors</li> -->
                                 <!-- <li>Available on GSM, AT T, T-Mobile and other carriers</li>
                                 <li>Compatible with GSM 850 / 900 / 1800; HSDPA 850 / 1900 / 2100 LTE; 700 MHz Class 17 / 1700 / 2100 networks</li>
                                 <li>MicroUSB and USB connectivity</li>
