@@ -44,7 +44,7 @@
     $imagePrice = 0;
 //    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
     $stmt = $db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product');
-    $product_row = $stmt->fetch(PDO::FETCH_INTO);
+    $product_row = $stmt->fetch(PDO::FETCH_BOTH);
     
     if ($product_row != NULL)
     {
@@ -93,8 +93,32 @@
       <h1 class="my-4">Tim's Art
         <!-- <small>Secondary Text</small> -->
       </h1>
+      
+      <?php 
+       foreach ($db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product') as $product_row )
+       {
+        $productId= $product_row['product_id'];
+        $imageLocation = $product_row['image'];
+        $imageTitle = $product_row['title'];
+        $imageDescription = $product_row["descr"];
+        $imageDimensions = $product_row["dimensions"];
+        $imagePrice = $product_row["price"];
 
-      <div class="row">
+          echo "<div class='row'>";
+          echo "<div class='col-lg-4 col-sm-6 portfolio-item'>";
+          echo  "<div class='card h-100'>";
+          echo     "<a href='#'><img class='card-img-top' src='artWork/' . $imageLocation' alt=''></a>";
+          echo    "<div class='card-body'>"; 
+          echo      "<h4 class='card-title'>";
+          echo        "<a href='details.php?productId='$productId'> $imageTitle </a>";
+          echo      "</h4>";
+          echo      "<p class='card-text'>$imageDescription</p>";
+          echo    "</div>";
+          echo  "</div>";
+          echo "</div>";
+       }
+      ?>
+      <!-- <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="<?php echo "artWork/" . $imageLocation;?>" alt=""></a>
@@ -161,7 +185,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
       <!-- Pagination -->
