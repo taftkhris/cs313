@@ -104,6 +104,7 @@
       <h1 class="my-4">Tim's Art
         <!-- <small>Secondary Text</small> -->
       </h1>
+
       <div class="row">
       <?php 
        foreach ($product as $product_row)
@@ -115,7 +116,7 @@
         $imageDimensions = $product_row["dimensions"];
         $imagePrice = $product_row["price"];
 
-          echo "<div class='row'>";
+          // echo "<div class='row'>";
           echo "<div class='col-lg-4 col-sm-6 portfolio-item'>";
           echo  "<div class='card h-100'>";
           echo     "<a href='#'><img class='card-img-top' src='artWork/$imageLocation' alt=''></a>";
