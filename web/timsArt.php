@@ -44,7 +44,7 @@
     $imagePrice = 0;
 //    $product_row = $db->query('SELECT title, description, dimensions, price, image FROM product');
     $stmt = $db->query('SELECT product_id, title, description as descr, dimensions, price, image FROM product');
-    $product_row = $stmt->fetch(PDO::FETCH_BOTH);
+    $product_row = $stmt->fetch(PDO::FETCH_INTO);
     
     if ($product_row != NULL)
     {
