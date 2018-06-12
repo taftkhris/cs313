@@ -44,7 +44,7 @@ $product = $statement->fetch();
         <div class="container">
         	<div class="row">
                <div class="col-xs-4 item-photo">
-                    <img style="max-width:100%;" src="<?php echo "artWork/" . $product["image"];?>" />
+                    <img style="max-width:75%;" src="<?php echo "artWork/" . $product["image"];?>" />
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
