@@ -104,7 +104,7 @@
       <h1 class="my-4">Tim's Art
         <!-- <small>Secondary Text</small> -->
       </h1>
-      
+      <div class="row">
       <?php 
        foreach ($product as $product_row)
        {
@@ -129,26 +129,27 @@
           echo "</div>";
        }
       ?>
+      </div>
       <!-- <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo "artWork/" . $imageLocation;?>" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<//?php echo "artWork/" . $imageLocation;?>" alt=""></a>
             <div class="card-body"> 
               <h4 class="card-title">
-                <a href="details.php?productId=<?php echo $productId; ?>"><?php echo $imageTitle; ?></a>
+                <a href="details.php?productId=<//?php echo $productId; ?>"><//?php echo $imageTitle; ?></a>
               </h4>
-              <p class="card-text"><?php echo $imageDescription?></p>
+              <p class="card-text"><//?php echo $imageDescription?></p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo "artWork/" . $imageLocation;?>" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<//?php echo "artWork/" . $imageLocation;?>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="<?php echo "artWork/" . $imageLocation;?>"></a>
+                <a href="<//?php echo "artWork/" . $imageLocation;?>"></a>
               </h4>
-              <p class="card-text"><?php echo $imageDescription; ?></p>
+              <p class="card-text"><//?php echo $imageDescription; ?></p>
             </div>
           </div>
         </div>
