@@ -23,7 +23,8 @@ $product = $statement->fetch();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
     <!-- <script src="main.js"></script> -->
-    <link href="detailsPage.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <link href="detailsPage.css" rel="stylesheet" id="bootstrap-css"> -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -43,7 +44,7 @@ $product = $statement->fetch();
         <div class="container">
         	<div class="row">
                <div class="col-xs-4 item-photo">
-                    <img style="max-width:100%;" src=""<?php echo "artWork/" . $product["image"];?>"" />
+                    <img style="max-width:100%;" src="<?php echo "artWork/" . $product["image"];?>" />
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
