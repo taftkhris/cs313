@@ -33,11 +33,11 @@ if (!isset($productList)) {
 $found = false;
 for($k = 0; $k < count($productList); $k++) {
     $item = $productList[$k];
-    echo "We're in the loop<br>";
-    echo "The items product id is: $item->productId<br>";
-    echo "The items product id is: $productId<br>";
+    // echo "We're in the loop<br>";
+    // echo "The items product id is: $item->productId<br>";
+    // echo "The items product id is: $productId<br>";
     if($item->productId == $productId) {
-        echo "found a match";
+        // echo "found a match";
         $item->quantity++;
         $found = true;
         break;
@@ -65,6 +65,6 @@ $_SESSION["productList"] = serialize($productList);
     <script src="main.js"></script>
 </head>
 <body>
-    <h1> <?php var_dump($productList); ?> </h1>
+    <h1> <?php $productList["title"]; ?> </h1>
 </body>
 </html>
