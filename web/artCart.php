@@ -65,6 +65,6 @@ $_SESSION["productList"] = serialize($productList);
     <script src="main.js"></script>
 </head>
 <body>
-    <h1> <?php $productList["title"]; ?> </h1>
+    <h1> <?php $product["title"]; ?> </h1>
 </body>
 </html>
