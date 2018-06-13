@@ -65,7 +65,7 @@ $product = $statement->fetch();
         
                     <!-- Botones de compra -->
                     <div class="section" style="padding-bottom:20px;">
-                        <a href="artCart.php?productId=<?php echo $productId; ?>&mode=add"><button class="btn btn-success" formmethod="post"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</button></a>
+                        <a href="artCart.php?productId=<?php echo $productId; ?>&mode=add"><button class="btn btn-success" formmethod="POST"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</button></a>
                     </div>                                        
                 </div>                              
         
