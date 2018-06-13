@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require("dbConnect.php");
-$productId = htmlspecialchars($_GET["productId"]);
+$productId = htmlspecialchars($_POST["productId"]);
 
 $db = get_db();
 
