@@ -66,5 +66,13 @@ $_SESSION["productList"] = serialize($productList);
 </head>
 <body>
     <h1> <?php echo $product["title"]; ?> </h1>
+    <form action="" method="POST">
+        First Name:<input type="text" placeholder="First Name">
+        Last Name:<input type="text" placeholder="Last Name">
+        Card Number:<input type="text" placeholder="Card Number">
+        CVV:<input type="text" placeholder="CVV">
+        Expiration Date:<input type="text" placeholder="01/20"> 
+        <input type="submit">
+    </form>
 </body>
 </html>
