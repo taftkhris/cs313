@@ -53,22 +53,7 @@ $product = $statement->fetch();
                     <!-- Precios -->
                     <h6 class="title-price"><small><?php echo $product["title"] . " Art Piece"; ?></small></h6>
                     <h3 style="margin-top:0px;"><?php echo "$" . $product["price"]; ?></h3>
-        
-                    <!-- Detalles especificos del producto -->
-                    <!-- <div class="section">
-                        <h6 class="title-attr" style="margin-top:15px;" ><small>COLOR</small></h6>                    
-                        <div>
-                            <div class="attr" style="width:25px;background:#5a5a5a;"></div>
-                            <div class="attr" style="width:25px;background:white;"></div>
-                        </div>
-                    </div>
-                    <div class="section" style="padding-bottom:5px;">
-                        <h6 class="title-attr"><small>CAPACIDAD</small></h6>                    
-                        <div>
-                            <div class="attr2">16 GB</div>
-                            <div class="attr2">32 GB</div>
-                        </div>
-                    </div>    -->
+   
                     <div class="section" style="padding-bottom:20px;">
                         <h6 class="title-attr"><small>Quantity</small></h6>                    
                         <div>
@@ -80,7 +65,7 @@ $product = $statement->fetch();
         
                     <!-- Botones de compra -->
                     <div class="section" style="padding-bottom:20px;">
-                        <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</button>
+                        <a href="artCart.php?productId=<//?php echo $productId; ?>&mode=add"><button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</button></a>
                     </div>                                        
                 </div>                              
         
@@ -99,8 +84,8 @@ $product = $statement->fetch();
                         </p>
                         <small>
                             <ul>
-                                <li>Super AMOLED capacitive touchscreen display with 16M colors</li>
-                                <!-- <li>Available on GSM, AT T, T-Mobile and other carriers</li>
+                                <!-- <li>Super AMOLED capacitive touchscreen display with 16M colors</li>
+                                <li>Available on GSM, AT T, T-Mobile and other carriers</li>
                                 <li>Compatible with GSM 850 / 900 / 1800; HSDPA 850 / 1900 / 2100 LTE; 700 MHz Class 17 / 1700 / 2100 networks</li>
                                 <li>MicroUSB and USB connectivity</li>
                                 <li>Interfaces with Wi-Fi 802.11 a/b/g/n/ac, dual band and Bluetooth</li>
